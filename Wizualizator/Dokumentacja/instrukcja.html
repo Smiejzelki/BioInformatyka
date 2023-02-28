@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dokumentacja</title>
+
+    <link rel="stylesheet" href="res/styl.css">
+  </head>
+  <body>
+    <h1>Dokumentacja projektu</h1>
+    <p>
+      Program został wykonany z myślą o 3 edycji konkursu Motorola Science Cup.
+      Projekt jest z kategorii bioinformatyka.
+    </p>
+
+    <h2>Zastosowania i możliwości projektu</h2>
+    <ul>
+      <li>Wygodna agregacja sekwencji danych w abstrakcji projketów</li>
+      <li>Tworzenie nowych projektów i odczytywanie zapisanych</li>
+      <li>Ręczne wprowadzanie sekwencji DNA, RNA i aminokwasów</li>
+      <li>Wczytywanie sekwencji DNA, RNA i aminokwasów z plików (wspierany jest format FASTA)</li>
+      <li>Dwuwymiarowa wizualizacja struktur peptydów</li>
+      <li>Wizualizacja otwartych ramek odczytu białek</li>
+      <li>Obliczanie wartości fizycznych, chemicznych i biologicznych peptydów, m.in: 
+        masa molekularna, 
+        wzór chemiczny (wykres i wzór), 
+        ładunek, 
+        status peptydu (neutralny, zasadowy, kwasowy),
+        Współczynnik ekstynkcji,
+        Zredukowany Współczynnik ekstynkcji (bez uwzględnienia par cysteinowych),
+        punkt izoelektryczny (wykres i wartość), 
+        hydrofobowosc (wykres)
+    </ul> 
+
+    <h2>Uruchamianie programu</h2>
+    <p>
+      Program jest aplikacja natywną systemu Windows w formie pliku wykonywalnego. 
+      Aby włączyć program, należy uruchomić dołączony plik <b>Wizualizator.exe</b> znajdujacy się
+      katalogu <b>Projekt</b>.
+      Upewnij się, że w folderze, w którym znajduje się program, obecne są również
+      folder <b>"res"</b> i plik biblioteki dynamicznej <b>freetype.dll</b> (powinny one być dołączone, jeśli ich nie ma - 
+      pobierz projekt ponownie wraz z nimi. <b>Bez nich uruchomienie programu będzie niemożliwe!</b>).  
+    </p>
+
+    <h2>Korzystanie z programu</h2>
+    <h3>Zarządzanie projektami</h3>
+    <p>
+      Program pozwala na tworzenie i wczytywanie projektów. Pliki projektu posiadają rozszerzenie <b>.vis</b>.
+      Tak wygląda program po uruchomieniu:
+    </p>
+    <img src = "res/ProgramPoUruchomieniu.PNG" width = 60%>
+    <p>
+      Przy uruchomieniu programu automatycznie otwiera się pusty projekt.
+      Aby manualnie stworzyć nowy, należy kliknąć File -> New. Jeśli obecnie pracujemy nad projektem który posiada 
+      niezapisaną modyfikacje, należy będzie potwierdzić stworzenie nowego projektu.
+      Aby zapisać obecny projekt, należy kliknąć File -> Save as i podać nazwę projektu, lub
+      File -> Save, jeśli zapisujemy istniejący projekt i pracujemy na nim.
+      W celu wczytania istniejacego projektu, należy kliknąć File -> Open i wybrać istniejący projekt (upewnij się, że ma rozszerzenie .vis i byl utworzony w programie).
+    </p>
+    <h3>Zarządzanie sekwencjami</h3>
+    <p>
+      Program pozwala na tworzenie wielu sekwencji w pojedynczym projekcie. 
+      Aby zbadać sekwencje, należy kliknąć jej nazwę za pomocą <b>lewego przycisku myszy</b>.
+      Obecnie badana (wybrana) sekwencja będzie oznaczona kolorem białym, a pozostałe - szarym.
+      W sekwencjach można również wybrać konkretne otwarte ramki odczytu, jeśli istnieją. 
+    </p>
+    <h3>Tworzenie i usuwanie sekwencji</h3>
+    <p>
+      Pusty projekt nie zawiera żadnych sekwencji. Aby dodać nową sekwencje ręcznie, należy kliknąć <b>prawym przyciskiem myszy</b>,
+      w jednym z okien ramek (można zmienić okno ramki klikając w jego numer), <b>w przestrzeń hierarchii sekwencji</b> (zaznaczona kolorem czerwonym):
+    </p>
+    <img src = "res/PrzestrzenHierarchiiSekwencji.png" height = 500px>
+    <p>
+      Do wyboru możliwe są 3 rodzaje sekwencji: DNA, RNA i ciąg aminokwasów. Każda kolejno utworzona sekwencja zostanie wyświetlona pod 
+      poprzednią. Uracyl jest zamieniany na tyminę w przypadku DNA, a w RNA - tymina na uracyl.
+      Wielkość liter nie ma znaczenia. Wszelkie spacje i niewłaściwe dane są pomijane.
+      Sekwencje można również wczytać z pliku w formacie <b>FASTA</b>. Należy kliknąć w Project -> Import { typ sekwencji } i wybrać
+      interesujący nas plik. Aby usunąć istniejącą sekwencje, należy ją wybrać i kliknąć <b>prawym przyciskiem myszy</b> - pojawi się wtedy opcja usunięcia      
+      jej z programu.
+      W przypadku, gdy pracujemy nad konkretnym projektem (jest on zapisany na dysku) można również skorzystać z drzewa
+      plików projektu - <b>File Tree</b> - i przeciągnąć plik sekwencji w formacie na przestrzeń hierarchii sekwencji (zaznaczona kolorem czerwonym). Użytkownik zostanie wtedy poproszony o 
+      sposób, w jaki program ma zaimportować plik. 
+    </p>
+
+    <h2>Drzewo plików</h2>
+    <img src="res/FileDrag.PNG">
+
+    <h3>Korzystanie z wizualizatora otwartych ramek odczytu</h3>
+    <p>
+      W Sekwencjach DNA i RNA są wyłącznie ilustrowane otwarte ramki odczytu, które zostaną znalezione po translacji kodonów na aminokwasy.
+      W przypadku sekwencji aminokwasów możliwe jest badanie całej sekwencji (kodony STOP zostaną pominięte) lub pojedynczych znalezionych ramek. 
+      Aby ilustrować daną sekwencje, należy ją wybrać. Tak wygląda przykładowa wizualizacja otwartych ramek odczytu:
+    </p>
+
+    <img src = "res/RamkiOdczytuPrzyklad.PNG" width = 500px>
+    <p>
+      Każda znaleziona ramka jest symbolizowana przez odpowiedni blok o cyklicznie powtarzającym sie kolorze i unikatowym numerze (ORF-0, ORF-1, ..., ORF-n). Numer 
+      bloku oznacza numer ramki, która została znaleziona w sekwencji. Wielkość samego bloku jest proporcjonalna do długości znalezionej ramki w stosunku do pozostałych.
+      Im większa jest ramka, tym więsze prawdopodobieństwo, że to rzeczywiste białko. Liczby na osi symbolizują miejsce n-tego aminokwasu w skali całej sekwencji.
+    </p>
+    <p>Aby przesunąć miejsce wizualizacji, użyj <b>lewego przycisku myszy</b> i przeciągnij.</p>
+    <p>Aby zwiększyć/zmiejszyć obserwowany odcinek, użyj <b>scroll'a</b>.</p>
+    <p>Aby wybrać konkretną ramkę (a zatem część sekwencji), klinij w nią <b>prawym przyciskiem myszy</b></p>
+
+    <h3>Dwuwymariowa wizualizacja struktury</h3>
+    <p>Aby analizować sekwencje lub jej część, należy ją wybrać.</p>
+    <p>Aby zmienić poziom PH, użyj suwaka z wartością w oknie <b>Structure</b>. </p>
+    <p>Aby przesunąć miejsce wizualizacji, użyj <b>lewego przycisku myszy</b> i przeciągnij.</p>
+    <p>Aby zwiększyć/zmiejszyć obserwowany odcinek, użyj <b>scroll'a</b>.</p>
+    <p>Przykład: </p>
+    <img src = "res/StrukturaWizualizacja.PNG" width = 500px>
+
+    <h2>Starter content</h2>
+    <p>Przykładowe projekty i pliki .FASTA znajdują się w folderze <b>StarterContent</b> w katalogu głównym projektu.</p>
+
+    <h2>Wykorzystane biblioteki</h2>
+    <ul>
+      <li>
+        OpenGL - Rysowanie struktur (renderer)
+      </li>
+        <li>
+        FreeType - Rysowanie liter (renderer)
+      </li>
+      <li>
+        glad - Ładowanie funkcji OpenGL
+      </li>
+      <li>
+        GLFW - Zarządzanie oknem, klawiaturą i myszą
+      </li>
+      <li>
+        ImGui - Interface użytkownika
+      </li>
+      <li>
+        ImPlot - Interface użytkownika (wykresy)
+      </li>
+    </ul>
+
+    <h2>Struktura projektu</h2>
+    <ul>
+      <li>
+        BioInformatyka - biblioteka statyczna, wykorzystana do stworzenia aplikacji wizualizatora. 
+        Jej forma pozwala na ponowne wykorzystanie do innych programów. <b>Warto na nią zwrócić uwagę.</b>
+      </li>
+      <li>
+        Wizualizator - aplikacja wizualizatora.
+      </li>
+      <li>
+        Testy - zbiór testów jednostkowych, możliwe do sprawdzenia po samodzielnym zbudowaniu projektu.
+      </li>
+    </ul>
+    <h2>Autorzy projektu</h2>
+    <p>
+      Project został wykonany przez drużynę "Mlekołaki". Autorami są:
+    </p>
+    <ul>
+      <li>
+        Oliver Sławiński
+      </li>
+      <li>
+        Martin Sławiński
+      </li>
+      <li>
+        Karol Kasperek
+      </li>
+      <li>
+        Oskar Podkowa
+      </li>
+      <li>
+        Leon Łuczyn
+      </li>
+    </ul>
+  </body>
+</html>

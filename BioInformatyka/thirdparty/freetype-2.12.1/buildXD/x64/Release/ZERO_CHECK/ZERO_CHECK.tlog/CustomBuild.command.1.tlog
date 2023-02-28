@@ -1,0 +1,10 @@
+^C:\MOTOROLA\BIOINFORMATYKAPREMAKE\BIOINFORMATYKA\THIRDPARTY\FREETYPE-2.12.1\BUILDXD\CMAKEFILES\63FC612B8065E5E1D07C24A9625F92D1\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Motorola/BioinformatykaPremake/BioInformatyka/thirdparty/freetype-2.12.1 -BC:/Motorola/BioinformatykaPremake/BioInformatyka/thirdparty/freetype-2.12.1/buildXD --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Motorola/BioinformatykaPremake/BioInformatyka/thirdparty/freetype-2.12.1/buildXD/freetype.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

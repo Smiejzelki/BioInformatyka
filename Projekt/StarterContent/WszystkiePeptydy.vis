@@ -1,0 +1,86 @@
+#PEP:Alanine (A)
+A
+{
+}
+#PEP:Arginine (R)
+R
+{
+}
+#PEP:Asparagine (N)
+N
+{
+}
+#PEP:Aspartic Acid (D)
+D
+{
+}
+#PEP:Cysteine (C)
+C
+{
+}
+#PEP:Glutamic Acid (E)
+E
+{
+}
+#PEP:Glutamine (Q)
+Q
+{
+}
+#PEP:Glycine (G)
+G
+{
+}
+#PEP:Histidine (H)
+H
+{
+}
+#PEP:Isoleucine (I)
+I
+{
+}
+#PEP:Leucine (L)
+L
+{
+}
+#PEP:Lysine (K)
+K
+{
+}
+#PEP:Methionine (M)
+M
+{
+M
+}
+#PEP:Phenylalanine (F)
+F
+{
+}
+#PEP:Proline (P)
+P
+{
+}
+#PEP:Serine (S)
+S
+{
+}
+#PEP:Threonine (T)
+T
+{
+}
+#PEP:Tryptophan (W)
+W
+{
+}
+#PEP:Tyrosine (Y)
+Y
+{
+}
+#PEP:Valine (V)
+V
+{
+}
+#PEP:All aminos (ARNDCEQGHILKMFPSTWYV)
+ARNDCEQGHILKMFPSTWYV
+{
+MFPSTWYV
+}
