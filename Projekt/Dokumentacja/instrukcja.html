@@ -17,8 +17,8 @@
 
     <h2>Zastosowania i możliwości projektu</h2>
     <ul>
-      <li>Wygodna agregacja sekwencji danych w abstrakcji projketów</li>
-      <li>Tworzenie nowych projektów i odczytywanie zapisanych</li>
+      <li>Wygodna agregacja sekwencji danych w abstrakcji projektów</li>
+      <li>Tworzenie na i odczytywanie projektów z dysku</li>
       <li>Ręczne wprowadzanie sekwencji DNA, RNA i aminokwasów</li>
       <li>Wczytywanie sekwencji DNA, RNA i aminokwasów z plików (wspierany jest format FASTA)</li>
       <li>Dwuwymiarowa wizualizacja struktur peptydów</li>
@@ -53,18 +53,19 @@
     <img src = "res/ProgramPoUruchomieniu.PNG" width = 60%>
     <p>
       Przy uruchomieniu programu automatycznie otwiera się pusty projekt.
-      Aby manualnie stworzyć nowy, należy kliknąć File -> New. Jeśli obecnie pracujemy nad projektem który posiada 
+      Aby manualnie stworzyć nowy, należy kliknąć <b>File -> New</b>. Jeśli obecnie pracujemy nad projektem który posiada 
       niezapisaną modyfikacje, należy będzie potwierdzić stworzenie nowego projektu.
-      Aby zapisać obecny projekt, należy kliknąć File -> Save as i podać nazwę projektu, lub
-      File -> Save, jeśli zapisujemy istniejący projekt i pracujemy na nim.
-      W celu wczytania istniejacego projektu, należy kliknąć File -> Open i wybrać istniejący projekt (upewnij się, że ma rozszerzenie .vis i byl utworzony w programie).
+      Aby zapisać obecny projekt, należy kliknąć <b>File -> Save as</b> i podać nazwę projektu, lub
+      <b>File -> Save</b>, jeśli zapisujemy istniejący projekt i pracujemy na nim.
+      W celu wczytania istniejącego projektu, należy kliknąć <b>File -> Open</b> i wybrać istniejący już projekt (upewnij się, że ma rozszerzenie .vis i byl utworzony w programie).
     </p>
     <h3>Zarządzanie sekwencjami</h3>
     <p>
       Program pozwala na tworzenie wielu sekwencji w pojedynczym projekcie. 
       Aby zbadać sekwencje, należy kliknąć jej nazwę za pomocą <b>lewego przycisku myszy</b>.
       Obecnie badana (wybrana) sekwencja będzie oznaczona kolorem białym, a pozostałe - szarym.
-      W sekwencjach można również wybrać konkretne otwarte ramki odczytu, jeśli istnieją. 
+      W sekwencjach można również wybrać konkretne otwarte ramki odczytu, jeśli istnieją - w przypadku 
+      ich wyboru zostaną również podkreślone. 
     </p>
     <h3>Tworzenie i usuwanie sekwencji</h3>
     <p>
@@ -76,12 +77,13 @@
       Do wyboru możliwe są 3 rodzaje sekwencji: DNA, RNA i ciąg aminokwasów. Każda kolejno utworzona sekwencja zostanie wyświetlona pod 
       poprzednią. Uracyl jest zamieniany na tyminę w przypadku DNA, a w RNA - tymina na uracyl.
       Wielkość liter nie ma znaczenia. Wszelkie spacje i niewłaściwe dane są pomijane.
-      Sekwencje można również wczytać z pliku w formacie <b>FASTA</b>. Należy kliknąć w Project -> Import { typ sekwencji } i wybrać
-      interesujący nas plik. Aby usunąć istniejącą sekwencje, należy ją wybrać i kliknąć <b>prawym przyciskiem myszy</b> - pojawi się wtedy opcja usunięcia      
+      Sekwencje można również wczytać z pliku w formacie <b>FASTA</b>. Należy kliknąć w menu <b>Project -> Import</b> i wybrać
+      interesujący nas rodzaj sekwencji oraz plik, z którego zostanie odczytana. Aby usunąć istniejącą sekwencje, należy ją wybrać i kliknąć <b>prawym przyciskiem myszy</b> - pojawi się wtedy opcja usunięcia      
       jej z programu.
       W przypadku, gdy pracujemy nad konkretnym projektem (jest on zapisany na dysku) można również skorzystać z drzewa
-      plików projektu - <b>File Tree</b> - i przeciągnąć plik sekwencji w formacie na przestrzeń hierarchii sekwencji (zaznaczona kolorem czerwonym). Użytkownik zostanie wtedy poproszony o 
-      sposób, w jaki program ma zaimportować plik. 
+      plików projektu - <b>File Tree</b> - i przeciągnąć plik sekwencji w formacie <b>FASTA</b>(tylko takie są brane pod uwagę) na przestrzeń hierarchii sekwencji 
+      (zaznaczona kolorem czerwonym). Użytkownik zostanie wtedy poproszony o sposób, w jaki program ma zaimportować plik. Drzewo plików obserwuje katalog, 
+      w którym znajduje się obecny projekt.
     </p>
 
     <h2>Drzewo plików</h2>
@@ -102,7 +104,7 @@
     </p>
     <p>Aby przesunąć miejsce wizualizacji, użyj <b>lewego przycisku myszy</b> i przeciągnij.</p>
     <p>Aby zwiększyć/zmiejszyć obserwowany odcinek, użyj <b>scroll'a</b>.</p>
-    <p>Aby wybrać konkretną ramkę (a zatem część sekwencji), klinij w nią <b>prawym przyciskiem myszy</b></p>
+    <p>Aby wybrać konkretną ramkę (a zatem część całej sekwencji), klinij w nią <b>prawym przyciskiem myszy</b></p>
 
     <h3>Dwuwymariowa wizualizacja struktury</h3>
     <p>Aby analizować sekwencje lub jej część, należy ją wybrać.</p>
@@ -152,7 +154,7 @@
     </ul>
     <h2>Autorzy projektu</h2>
     <p>
-      Project został wykonany przez drużynę "Mlekołaki". Autorami są:
+      Projekt został wykonany przez drużynę "Smiejzelki" (lub "Mlekołaki" - nie pamiętamy). Autorami są:
     </p>
     <ul>
       <li>
