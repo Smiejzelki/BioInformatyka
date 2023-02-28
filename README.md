@@ -5,3 +5,5 @@
 `git clone https://github.com/Smiejzelki/BioInformatyka.git`
 `cd BioInformatyka/ProjectScripts/VisualStudio`
 `GenerateVS2022.bat`
+## Dokumentacja
+### Dokumentacje projektu można znaleść w folderze Projekt/Dokumentacja pod nazwą instrukcja.html.
