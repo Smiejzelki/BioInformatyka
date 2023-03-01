@@ -8,7 +8,7 @@
 ## Dokumentacja
 ### Dokumentacje projektu można znaleść w folderze Projekt/Dokumentacja pod nazwą instrukcja.html.
 
-### Struktura plików
+##  Struktura plików
     Bioinformatyka
     ├── BioInformatyka                  # Kod biblioteki "BioInformatyka"
     |   ├── include (...)               # Pliki nagłówkowe
